@@ -1,0 +1,17 @@
+{
+  "name": "normalization-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && node dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/relay-runtime": "^14.1.23",
+    "relay-runtime": "16.0.0",
+    "typescript": "^5.4.2"
+  }
+}
