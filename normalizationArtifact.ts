@@ -1,6 +1,5 @@
-// From https://pastebin.com/np5p0fcR
 /**
- * @generated SignedSource<<297dc3d63e1f6ebb5eb38e2fa3616c51>>
+ * @generated SignedSource<<34d6821b55d89326bb94e2af6293ccb7>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -9,678 +8,193 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest, Query } from "relay-runtime";
-export type queryInput_fedSequencingReads_input_Input = {
-  consensusGenomesInput?:
-    | queryInput_fedSequencingReads_input_consensusGenomesInput_Input
-    | null
-    | undefined;
-  limit?: number | null | undefined;
-  limitOffset?:
-    | queryInput_fedSequencingReads_input_limitOffset_Input
-    | null
-    | undefined;
-  offset?: number | null | undefined;
-  orderBy?:
-    | queryInput_fedSequencingReads_input_orderBy_Input
-    | null
-    | undefined;
-  orderByArray?:
-    | ReadonlyArray<
-        | queryInput_fedSequencingReads_input_orderByArray_items_Input
-        | null
-        | undefined
-      >
-    | null
-    | undefined;
-  todoRemove?:
-    | queryInput_fedSequencingReads_input_todoRemove_Input
-    | null
-    | undefined;
-  where?: queryInput_fedSequencingReads_input_where_Input | null | undefined;
+import { ConcreteRequest, Query } from 'relay-runtime';
+export type queryInput_fedWorkflowRunsAggregate_input_Input = {
+  todoRemove?: queryInput_fedWorkflowRunsAggregate_input_todoRemove_Input | null | undefined;
+  where?: queryInput_fedWorkflowRunsAggregate_input_where_Input | null | undefined;
 };
-export type queryInput_fedSequencingReads_input_limitOffset_Input = {
-  limit?: number | null | undefined;
-  offset?: number | null | undefined;
+export type queryInput_fedWorkflowRunsAggregate_input_where_Input = {
+  id?: queryInput_fedWorkflowRunsAggregate_input_where_id_Input | null | undefined;
+  workflowVersion?: queryInput_fedWorkflowRunsAggregate_input_where_workflowVersion_Input | null | undefined;
 };
-export type queryInput_fedSequencingReads_input_where_Input = {
-  id?: queryInput_fedSequencingReads_input_where_id_Input | null | undefined;
-};
-export type queryInput_fedSequencingReads_input_where_id_Input = {
+export type queryInput_fedWorkflowRunsAggregate_input_where_id_Input = {
   _in?: ReadonlyArray<string | null | undefined> | null | undefined;
 };
-export type queryInput_fedSequencingReads_input_orderBy_Input = {
-  medakaModel?: string | null | undefined;
-  nucleicAcid?: string | null | undefined;
-  protocol?: string | null | undefined;
-  sample?:
-    | queryInput_fedSequencingReads_input_orderBy_sample_Input
-    | null
-    | undefined;
-  technology?: string | null | undefined;
+export type queryInput_fedWorkflowRunsAggregate_input_where_workflowVersion_Input = {
+  workflow?: queryInput_fedWorkflowRunsAggregate_input_where_workflowVersion_workflow_Input | null | undefined;
 };
-export type queryInput_fedSequencingReads_input_orderBy_sample_Input = {
-  collectionLocation?: string | null | undefined;
-  hostOrganism?:
-    | queryInput_fedSequencingReads_input_orderBy_sample_hostOrganism_Input
-    | null
-    | undefined;
-  metadata?:
-    | queryInput_fedSequencingReads_input_orderBy_sample_metadata_Input
-    | null
-    | undefined;
-  name?: string | null | undefined;
-  notes?: string | null | undefined;
-  sampleType?: string | null | undefined;
-  waterControl?: string | null | undefined;
+export type queryInput_fedWorkflowRunsAggregate_input_where_workflowVersion_workflow_Input = {
+  name?: queryInput_fedWorkflowRunsAggregate_input_where_workflowVersion_workflow_name_Input | null | undefined;
 };
-export type queryInput_fedSequencingReads_input_orderBy_sample_hostOrganism_Input =
-  {
-    name?: string | null | undefined;
-  };
-export type queryInput_fedSequencingReads_input_orderBy_sample_metadata_Input =
-  {
-    dir?: string | null | undefined;
-    fieldName?: string | null | undefined;
-  };
-export type queryInput_fedSequencingReads_input_orderByArray_items_Input = {
-  medakaModel?: string | null | undefined;
-  nucleicAcid?: string | null | undefined;
-  protocol?: string | null | undefined;
-  sample?:
-    | queryInput_fedSequencingReads_input_orderByArray_items_sample_Input
-    | null
-    | undefined;
-  technology?: string | null | undefined;
+export type queryInput_fedWorkflowRunsAggregate_input_where_workflowVersion_workflow_name_Input = {
+  _in?: ReadonlyArray<string | null | undefined> | null | undefined;
 };
-export type queryInput_fedSequencingReads_input_orderByArray_items_sample_Input =
-  {
-    collectionLocation?: string | null | undefined;
-    hostOrganism?:
-      | queryInput_fedSequencingReads_input_orderByArray_items_sample_hostOrganism_Input
-      | null
-      | undefined;
-    metadata?:
-      | queryInput_fedSequencingReads_input_orderByArray_items_sample_metadata_Input
-      | null
-      | undefined;
-    name?: string | null | undefined;
-    notes?: string | null | undefined;
-    sampleType?: string | null | undefined;
-    waterControl?: string | null | undefined;
-  };
-export type queryInput_fedSequencingReads_input_orderByArray_items_sample_hostOrganism_Input =
-  {
-    name?: string | null | undefined;
-  };
-export type queryInput_fedSequencingReads_input_orderByArray_items_sample_metadata_Input =
-  {
-    dir?: string | null | undefined;
-    fieldName?: string | null | undefined;
-  };
-export type queryInput_fedSequencingReads_input_consensusGenomesInput_Input = {
-  where?:
-    | queryInput_fedSequencingReads_input_consensusGenomesInput_where_Input
-    | null
-    | undefined;
-};
-export type queryInput_fedSequencingReads_input_consensusGenomesInput_where_Input =
-  {
-    producingRunId?:
-      | queryInput_fedSequencingReads_input_consensusGenomesInput_where_producingRunId_Input
-      | null
-      | undefined;
-  };
-export type queryInput_fedSequencingReads_input_consensusGenomesInput_where_producingRunId_Input =
-  {
-    _in?: ReadonlyArray<string | null | undefined> | null | undefined;
-  };
-export type queryInput_fedSequencingReads_input_todoRemove_Input = {
+export type queryInput_fedWorkflowRunsAggregate_input_todoRemove_Input = {
+  annotations?: ReadonlyArray<queryInput_fedWorkflowRunsAggregate_input_todoRemove_annotations_items_Input | null | undefined> | null | undefined;
   domain?: string | null | undefined;
   host?: ReadonlyArray<number | null | undefined> | null | undefined;
   locationV2?: ReadonlyArray<string | null | undefined> | null | undefined;
-  orderBy?: string | null | undefined;
-  orderDir?: string | null | undefined;
   projectId?: string | null | undefined;
   search?: string | null | undefined;
   taxaLevels?: ReadonlyArray<string | null | undefined> | null | undefined;
-  taxons?: ReadonlyArray<number | null | undefined> | null | undefined;
+  taxon?: ReadonlyArray<number | null | undefined> | null | undefined;
+  taxonThresholds?: ReadonlyArray<queryInput_fedWorkflowRunsAggregate_input_todoRemove_taxonThresholds_items_Input | null | undefined> | null | undefined;
   time?: ReadonlyArray<string | null | undefined> | null | undefined;
   tissue?: ReadonlyArray<string | null | undefined> | null | undefined;
   visibility?: string | null | undefined;
-  workflow?: string | null | undefined;
 };
-export type DiscoveryViewFCSequencingReadsQuery$variables = {
-  input?: queryInput_fedSequencingReads_input_Input | null | undefined;
+export type queryInput_fedWorkflowRunsAggregate_input_todoRemove_taxonThresholds_items_Input = {
+  count_type?: string | null | undefined;
+  metric?: string | null | undefined;
+  operator?: string | null | undefined;
+  value?: string | null | undefined;
 };
-export type DiscoveryViewFCSequencingReadsQuery$data = {
-  readonly fedSequencingReads:
-    | ReadonlyArray<
-        | {
-            readonly consensusGenomes: {
-              readonly edges: ReadonlyArray<
-                | {
-                    readonly node: {
-                      readonly accession:
-                        | {
-                            readonly accessionId: string;
-                            readonly accessionName: string;
-                          }
-                        | null
-                        | undefined;
-                      readonly metrics:
-                        | {
-                            readonly coverageDepth: number | null | undefined;
-                            readonly gcPercent: number | null | undefined;
-                            readonly nActg: number | null | undefined;
-                            readonly nAmbiguous: number | null | undefined;
-                            readonly nMissing: number | null | undefined;
-                            readonly percentGenomeCalled:
-                              | number
-                              | null
-                              | undefined;
-                            readonly percentIdentity: number | null | undefined;
-                            readonly refSnps: number | null | undefined;
-                            readonly referenceGenomeLength:
-                              | number
-                              | null
-                              | undefined;
-                            readonly totalReads: number | null | undefined;
-                          }
-                        | null
-                        | undefined;
-                      readonly producingRunId: string | null | undefined;
-                      readonly taxon:
-                        | {
-                            readonly name: string;
-                          }
-                        | null
-                        | undefined;
-                    };
-                  }
-                | null
-                | undefined
-              >;
-            };
-            readonly id: string;
-            readonly medakaModel: string | null | undefined;
-            readonly nucleicAcid: string;
-            readonly protocol: string | null | undefined;
-            readonly sample:
-              | {
-                  readonly collection:
-                    | {
-                        readonly name: string | null | undefined;
-                        readonly public: boolean | null | undefined;
-                      }
-                    | null
-                    | undefined;
-                  readonly collectionLocation: string;
-                  readonly hostOrganism:
-                    | {
-                        readonly name: string;
-                      }
-                    | null
-                    | undefined;
-                  readonly metadatas: {
-                    readonly edges: ReadonlyArray<
-                      | {
-                          readonly node: {
-                            readonly fieldName: string;
-                            readonly value: string;
-                          };
-                        }
-                      | null
-                      | undefined
-                    >;
-                  };
-                  readonly name: string;
-                  readonly notes: string | null | undefined;
-                  readonly ownerUserId: number | null | undefined;
-                  readonly ownerUserName: string | null | undefined;
-                  readonly railsSampleId: number | null | undefined;
-                  readonly sampleType: string;
-                  readonly uploadError: string | null | undefined;
-                  readonly waterControl: boolean | null | undefined;
-                }
-              | null
-              | undefined;
-            readonly taxon:
-              | {
-                  readonly name: string;
-                }
-              | null
-              | undefined;
-            readonly technology: string;
-          }
-        | null
-        | undefined
-      >
-    | null
-    | undefined;
+export type queryInput_fedWorkflowRunsAggregate_input_todoRemove_annotations_items_Input = {
+  name?: string | null | undefined;
 };
-export type DiscoveryViewFCSequencingReadsQuery = {
-  response: DiscoveryViewFCSequencingReadsQuery$data;
-  variables: DiscoveryViewFCSequencingReadsQuery$variables;
+export type DiscoveryViewFCFedWorkflowRunsAggregateQuery$variables = {
+  input?: queryInput_fedWorkflowRunsAggregate_input_Input | null | undefined;
+};
+export type DiscoveryViewFCFedWorkflowRunsAggregateQuery$data = {
+  readonly fedWorkflowRunsAggregate: {
+    readonly aggregate: ReadonlyArray<{
+      readonly count: number;
+      readonly groupBy: {
+        readonly collectionId: number;
+        readonly workflowVersion: {
+          readonly workflow: {
+            readonly name: string;
+          };
+        };
+      };
+    } | null | undefined> | null | undefined;
+  } | null | undefined;
+};
+export type DiscoveryViewFCFedWorkflowRunsAggregateQuery = {
+  response: DiscoveryViewFCFedWorkflowRunsAggregateQuery$data;
+  variables: DiscoveryViewFCFedWorkflowRunsAggregateQuery$variables;
 };
 
-const node: ConcreteRequest = (function () {
-  var v0 = [
+const node: ConcreteRequest = (function(){
+var v0 = [
+  {
+    "defaultValue": null,
+    "kind": "LocalArgument",
+    "name": "input"
+  }
+],
+v1 = [
+  {
+    "alias": null,
+    "args": [
       {
-        defaultValue: null,
-        kind: "LocalArgument",
-        name: "input",
-      },
+        "kind": "Variable",
+        "name": "input",
+        "variableName": "input"
+      }
     ],
-    v1 = {
-      alias: null,
-      args: null,
-      kind: "ScalarField",
-      name: "name",
-      storageKey: null,
-    },
-    v2 = [v1 /*: any*/],
-    v3 = [
+    "concreteType": "fedWorkflowRunsAggregate",
+    "kind": "LinkedField",
+    "name": "fedWorkflowRunsAggregate",
+    "plural": false,
+    "selections": [
       {
-        alias: null,
-        args: [
+        "alias": null,
+        "args": null,
+        "concreteType": "query_fedWorkflowRunsAggregate_aggregate_items",
+        "kind": "LinkedField",
+        "name": "aggregate",
+        "plural": true,
+        "selections": [
           {
-            kind: "Variable",
-            name: "input",
-            variableName: "input",
-          },
-        ],
-        concreteType: "query_fedSequencingReads_items",
-        kind: "LinkedField",
-        name: "fedSequencingReads",
-        plural: true,
-        selections: [
-          {
-            alias: null,
-            args: null,
-            kind: "ScalarField",
-            name: "id",
-            storageKey: null,
-          },
-          {
-            alias: null,
-            args: null,
-            kind: "ScalarField",
-            name: "nucleicAcid",
-            storageKey: null,
-          },
-          {
-            alias: null,
-            args: null,
-            kind: "ScalarField",
-            name: "protocol",
-            storageKey: null,
-          },
-          {
-            alias: null,
-            args: null,
-            kind: "ScalarField",
-            name: "medakaModel",
-            storageKey: null,
-          },
-          {
-            alias: null,
-            args: null,
-            kind: "ScalarField",
-            name: "technology",
-            storageKey: null,
-          },
-          {
-            alias: null,
-            args: null,
-            concreteType: "query_fedSequencingReads_items_taxon",
-            kind: "LinkedField",
-            name: "taxon",
-            plural: false,
-            selections: v2 /*: any*/,
-            storageKey: null,
-          },
-          {
-            alias: null,
-            args: null,
-            concreteType: "query_fedSequencingReads_items_sample",
-            kind: "LinkedField",
-            name: "sample",
-            plural: false,
-            selections: [
+            "alias": null,
+            "args": null,
+            "concreteType": "query_fedWorkflowRunsAggregate_aggregate_items_groupBy",
+            "kind": "LinkedField",
+            "name": "groupBy",
+            "plural": false,
+            "selections": [
               {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "railsSampleId",
-                storageKey: null,
-              },
-              v1 /*: any*/,
-              {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "notes",
-                storageKey: null,
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "collectionId",
+                "storageKey": null
               },
               {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "collectionLocation",
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "sampleType",
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "waterControl",
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "uploadError",
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                concreteType:
-                  "query_fedSequencingReads_items_sample_hostOrganism",
-                kind: "LinkedField",
-                name: "hostOrganism",
-                plural: false,
-                selections: v2 /*: any*/,
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                concreteType:
-                  "query_fedSequencingReads_items_sample_collection",
-                kind: "LinkedField",
-                name: "collection",
-                plural: false,
-                selections: [
-                  v1 /*: any*/,
+                "alias": null,
+                "args": null,
+                "concreteType": "query_fedWorkflowRunsAggregate_aggregate_items_groupBy_workflowVersion",
+                "kind": "LinkedField",
+                "name": "workflowVersion",
+                "plural": false,
+                "selections": [
                   {
-                    alias: null,
-                    args: null,
-                    kind: "ScalarField",
-                    name: "public",
-                    storageKey: null,
-                  },
-                ],
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "ownerUserId",
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                kind: "ScalarField",
-                name: "ownerUserName",
-                storageKey: null,
-              },
-              {
-                alias: null,
-                args: null,
-                concreteType: "query_fedSequencingReads_items_sample_metadatas",
-                kind: "LinkedField",
-                name: "metadatas",
-                plural: false,
-                selections: [
-                  {
-                    alias: null,
-                    args: null,
-                    concreteType:
-                      "query_fedSequencingReads_items_sample_metadatas_edges_items",
-                    kind: "LinkedField",
-                    name: "edges",
-                    plural: true,
-                    selections: [
+                    "alias": null,
+                    "args": null,
+                    "concreteType": "query_fedWorkflowRunsAggregate_aggregate_items_groupBy_workflowVersion_workflow",
+                    "kind": "LinkedField",
+                    "name": "workflow",
+                    "plural": false,
+                    "selections": [
                       {
-                        alias: null,
-                        args: null,
-                        concreteType:
-                          "query_fedSequencingReads_items_sample_metadatas_edges_items_node",
-                        kind: "LinkedField",
-                        name: "node",
-                        plural: false,
-                        selections: [
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "fieldName",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "value",
-                            storageKey: null,
-                          },
-                        ],
-                        storageKey: null,
-                      },
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "name",
+                        "storageKey": null
+                      }
                     ],
-                    storageKey: null,
-                  },
+                    "storageKey": null
+                  }
                 ],
-                storageKey: null,
-              },
+                "storageKey": null
+              }
             ],
-            storageKey: null,
+            "storageKey": null
           },
           {
-            alias: null,
-            args: null,
-            concreteType: "query_fedSequencingReads_items_consensusGenomes",
-            kind: "LinkedField",
-            name: "consensusGenomes",
-            plural: false,
-            selections: [
-              {
-                alias: null,
-                args: null,
-                concreteType:
-                  "query_fedSequencingReads_items_consensusGenomes_edges_items",
-                kind: "LinkedField",
-                name: "edges",
-                plural: true,
-                selections: [
-                  {
-                    alias: null,
-                    args: null,
-                    concreteType:
-                      "query_fedSequencingReads_items_consensusGenomes_edges_items_node",
-                    kind: "LinkedField",
-                    name: "node",
-                    plural: false,
-                    selections: [
-                      {
-                        alias: null,
-                        args: null,
-                        kind: "ScalarField",
-                        name: "producingRunId",
-                        storageKey: null,
-                      },
-                      {
-                        alias: null,
-                        args: null,
-                        concreteType:
-                          "query_fedSequencingReads_items_consensusGenomes_edges_items_node_taxon",
-                        kind: "LinkedField",
-                        name: "taxon",
-                        plural: false,
-                        selections: v2 /*: any*/,
-                        storageKey: null,
-                      },
-                      {
-                        alias: null,
-                        args: null,
-                        concreteType:
-                          "query_fedSequencingReads_items_consensusGenomes_edges_items_node_accession",
-                        kind: "LinkedField",
-                        name: "accession",
-                        plural: false,
-                        selections: [
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "accessionId",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "accessionName",
-                            storageKey: null,
-                          },
-                        ],
-                        storageKey: null,
-                      },
-                      {
-                        alias: null,
-                        args: null,
-                        concreteType:
-                          "query_fedSequencingReads_items_consensusGenomes_edges_items_node_metrics",
-                        kind: "LinkedField",
-                        name: "metrics",
-                        plural: false,
-                        selections: [
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "coverageDepth",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "totalReads",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "gcPercent",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "refSnps",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "percentIdentity",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "nActg",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "percentGenomeCalled",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "nMissing",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "nAmbiguous",
-                            storageKey: null,
-                          },
-                          {
-                            alias: null,
-                            args: null,
-                            kind: "ScalarField",
-                            name: "referenceGenomeLength",
-                            storageKey: null,
-                          },
-                        ],
-                        storageKey: null,
-                      },
-                    ],
-                    storageKey: null,
-                  },
-                ],
-                storageKey: null,
-              },
-            ],
-            storageKey: null,
-          },
+            "alias": null,
+            "args": null,
+            "kind": "ScalarField",
+            "name": "count",
+            "storageKey": null
+          }
         ],
-        storageKey: null,
-      },
-    ];
-  return {
-    fragment: {
-      argumentDefinitions: v0 /*: any*/,
-      kind: "Fragment",
-      metadata: null,
-      name: "DiscoveryViewFCSequencingReadsQuery",
-      selections: v3 /*: any*/,
-      type: "Query",
-      abstractKey: null,
-    },
-    kind: "Request",
-    operation: {
-      argumentDefinitions: v0 /*: any*/,
-      kind: "Operation",
-      name: "DiscoveryViewFCSequencingReadsQuery",
-      selections: v3 /*: any*/,
-    },
-    params: {
-      cacheID: "0854606456916a206e74794250eff57d",
-      id: null,
-      metadata: {},
-      name: "DiscoveryViewFCSequencingReadsQuery",
-      operationKind: "query",
-      text: "query DiscoveryViewFCSequencingReadsQuery(\n  $input: queryInput_fedSequencingReads_input_Input\n) {\n  fedSequencingReads(input: $input) {\n    id\n    nucleicAcid\n    protocol\n    medakaModel\n    technology\n    taxon {\n      name\n    }\n    sample {\n      railsSampleId\n      name\n      notes\n      collectionLocation\n      sampleType\n      waterControl\n      uploadError\n      hostOrganism {\n        name\n      }\n      collection {\n        name\n        public\n      }\n      ownerUserId\n      ownerUserName\n      metadatas {\n        edges {\n          node {\n            fieldName\n            value\n          }\n        }\n      }\n    }\n    consensusGenomes {\n      edges {\n        node {\n          producingRunId\n          taxon {\n            name\n          }\n          accession {\n            accessionId\n            accessionName\n          }\n          metrics {\n            coverageDepth\n            totalReads\n            gcPercent\n            refSnps\n            percentIdentity\n            nActg\n            percentGenomeCalled\n            nMissing\n            nAmbiguous\n            referenceGenomeLength\n          }\n        }\n      }\n    }\n  }\n}\n",
-    },
-  };
+        "storageKey": null
+      }
+    ],
+    "storageKey": null
+  }
+];
+return {
+  "fragment": {
+    "argumentDefinitions": (v0/*: any*/),
+    "kind": "Fragment",
+    "metadata": null,
+    "name": "DiscoveryViewFCFedWorkflowRunsAggregateQuery",
+    "selections": (v1/*: any*/),
+    "type": "Query",
+    "abstractKey": null
+  },
+  "kind": "Request",
+  "operation": {
+    "argumentDefinitions": (v0/*: any*/),
+    "kind": "Operation",
+    "name": "DiscoveryViewFCFedWorkflowRunsAggregateQuery",
+    "selections": (v1/*: any*/)
+  },
+  "params": {
+    "cacheID": "b898dce6714face6756b9a7f2a13bda2",
+    "id": null,
+    "metadata": {},
+    "name": "DiscoveryViewFCFedWorkflowRunsAggregateQuery",
+    "operationKind": "query",
+    "text": "query DiscoveryViewFCFedWorkflowRunsAggregateQuery(\n  $input: queryInput_fedWorkflowRunsAggregate_input_Input\n) {\n  fedWorkflowRunsAggregate(input: $input) {\n    aggregate {\n      groupBy {\n        collectionId\n        workflowVersion {\n          workflow {\n            name\n          }\n        }\n      }\n      count\n    }\n  }\n}\n"
+  }
+};
 })();
 
-(node as any).hash = "5d74d6f6ca976feb23f8398bfe79d269";
+(node as any).hash = "caccf7f95c73f91dd9c9ba8d9f0e8239";
 
 export default node;
